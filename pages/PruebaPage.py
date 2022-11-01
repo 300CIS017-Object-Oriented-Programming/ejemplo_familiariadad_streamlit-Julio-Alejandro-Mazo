@@ -2,24 +2,27 @@ import streamlit as st
 
 def probar_streamlit():
 
-    st.write("Bienvenidos")
-    if st.button('¿Como estan?'):
-        st.write('¿Qué estan haciendo?')
-    else:
-        st.write('Goodbye\n')
+    col1, col2 = st.columns(3)
 
-    """ Ponga aqui todos los controles de prueba para que entienda como funciona"""
-    st.write("Agregue aquí botones, paneles, y opciones tal como se describe en el readme")
-    st.button("Soy un boton\n")
+    with col1:
+        st.header("Hello")
+        st.write("Bienvenidos")
+        if st.button('¿Como estan?'):
+            st.write('¿Qué estan haciendo?')
+        else:
+            st.write('Goodbye\n')
 
-    genre = st.radio(
-        "Cuál es tu película favorita",
-        ('Jhon Wick', 'Bob Esponja', 'Black Adam'))
 
-    if genre == 'Jhon wick':
-        st.write('Selecionaste Jhon Wick.')
-    else:
-        st.write("Eres la Bestia")
+    with col2:
+        st.header("A dog")
+        genre = st.radio(
+            "Cuál es tu película favorita",
+            ('Jhon Wick', 'Bob Esponja', 'Black Adam'))
+        
+        if genre == 'Jhon wick':
+            st.write('Selecionaste Jhon Wick.')
+        else:
+            st.write("Eres la Bestia")
 
 
 # Main call
