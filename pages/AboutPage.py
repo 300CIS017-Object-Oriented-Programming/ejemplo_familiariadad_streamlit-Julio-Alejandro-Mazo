@@ -8,7 +8,11 @@ def mostrar():
         Aplicación de **streamlit**.
 
         ####
-        Ejemplo elaborado para @   por Luisa Rincón.
+        Ejemplo elaborado para @   por Julio Mazo.
+        
+        Hola como estan?
+        
+        Soy su mes favorito
 
         """
 
